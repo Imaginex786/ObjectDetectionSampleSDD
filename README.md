@@ -1,1 +1,1 @@
-# ObjectDetectionSampleSDD
+# ObjectDetectionSampleSSD
