@@ -1,8 +1,5 @@
 # Object Detection C++ Sample SSD
 
-TODO:
-- Integrate config.yml
-
 This topic demonstrates how to run the Object Detection sample application, which does inference using object detection
 networks like SSD-VGG on Intel® Processors and Intel® HD Graphics.
 
@@ -24,7 +21,7 @@ InferenceEngine:
     API version ............ <version>
     Build .................. <number>
 
-object_detection_sample_ssd [OPTION]
+./core [OPTION]
 Options:
 
     -h                      Print a usage message.
@@ -47,11 +44,11 @@ To run the sample, you can use public or pre-trained models. To download the pre
 For example, to do inference on a CPU with the OpenVINO&trade; toolkit person detection SSD models, run one of the following commands:
 
 ```sh
-./object_detection_sample_ssd -i <path_to_image>/inputImage.bmp -m <path_to_model>person-detection-retail-0013.xml -d CPU
+./core -i <path_to_image>/inputImage.bmp -m <path_to_model>person-detection-retail-0013.xml -d CPU
 ```
 or
 ```sh
-./object_detection_sample_ssd -i <path_to_image>/inputImage.jpg -m <path_to_model>person-detection-retail-0002.xml -d CPU
+./core -i <path_to_image>/inputImage.jpg -m <path_to_model>person-detection-retail-0002.xml -d CPU
 ```
 
 ## Sample Output
