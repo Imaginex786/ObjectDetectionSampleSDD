@@ -1,5 +1,8 @@
 # Object Detection C++ Sample SSD
 
+TODO:
+- Integrate config.yml
+
 This topic demonstrates how to run the Object Detection sample application, which does inference using object detection
 networks like SSD-VGG on Intel® Processors and Intel® HD Graphics.
 
