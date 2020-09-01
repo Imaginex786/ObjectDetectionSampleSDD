@@ -12,7 +12,6 @@
 #include "spdlog/spdlog.h"
 #include "ConfigProxy.hpp"
 #endif
-
 #include "common.hpp"
 
 std::string keys =
@@ -124,23 +123,6 @@ int main(int argc, char** argv)
     /** This vector stores paths to the processed images **/
     std::vector<std::string> images = config.getStringSequence("images_paths"); 
 
-
-
-    // CommandLineParser parser(argc, argv, keys);
-
-    // const std::string modelName = parser.get<String>("@alias");
-    // const std::string zooFile = parser.get<String>("zoo");
-
-    // keys += genPreprocArguments(modelName, zooFile);
-
-    // parser = CommandLineParser(argc, argv, keys);
-    // parser.about("Use this script to run object detection deep learning networks using OpenCV.");
-    // if (argc == 1 || parser.has("help"))
-    // {
-    //     parser.printMessage();
-    //     return 0;
-    // }
-
     confThreshold = config.getFloat("thr");
     nmsThreshold = config.getFloat("nms");
     float scale = config.getFloat("scale");
@@ -149,8 +131,6 @@ int main(int argc, char** argv)
     int inpWidth = config.getInt("width");
     int inpHeight = config.getInt("height");
     size_t asyncNumReq = config.getInt("async");
-    // std::string modelPath = findFile(parser.get<String>("model"));
-    // std::string configPath = findFile(parser.get<String>("config"));
     std::string modelPath = config.getString("model");
     std::string configPath = config.getString("config");
 

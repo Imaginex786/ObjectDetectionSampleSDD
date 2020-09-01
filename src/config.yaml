@@ -5,13 +5,23 @@ model: "/app/windows/D/workspace/CNN/imaginex/timeNattendance/models/FP32-INT1/f
 config: "/app/windows/D/workspace/CNN/imaginex/timeNattendance/models/FP32-INT1/face-detection-adas-binary-0001.xml"
 debug_log: false 
 device: "CPU"
-thr: 0.5
-nms: 0.4
-scale: 1.0
-rgb: true
-width: -1
-height: -1
-async: 0
-backend: 2
+thr: 0.5 #threshold
+nms: 0.4 #nms value
+scale: 1.0 #scale image
+rgb: true #switch between rgb & bgr
+width: -1 #pre-process width
+height: -1 #pre-process height
+async: 0 #Number of asynchronous forwards at the same time. Choose 0 for synchronous mode
+backend: 2 # 0,1,2,3
+        # Choose one of computation backends: "
+        #  "0: automatically (by default), "
+        #  "1: Halide language (http://halide-lang.org/), "
+        #  "2: Intel's Deep Learning Inference Engine (https://software.intel.com/openvino-toolkit), "
+        #  "3: OpenCV implementation }"
 framework: ""
-target: 0
+target: 0 
+#         Choose one of target computation devices: "
+#         "0: CPU target (by default), "
+#         "1: OpenCL, "
+#         "2: OpenCL fp16 (half-float precision), "
+#         "3: VPU }"
