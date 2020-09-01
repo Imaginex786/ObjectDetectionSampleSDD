@@ -69,7 +69,31 @@ bool ConfigProxy::getBool(const std::string& config_parameter)
     SPDLOG_INFO("value of [" + config_parameter + "] has been read from config file");
     return value;
 }
+int ConfigProxy::getSequenceSize(const std::string& config_parameter) 
+{   
+    spdlog::debug("getSequenceSize request received to read value of [" + config_parameter + "] from config file");    
+    assert(config[config_parameter].Type() == YAML::NodeType::Sequence);
+    double size =  config[config_parameter].size();
+    spdlog::debug("size of [" + config_parameter + "] has been read from config file");
+    return size;
+}
+std::vector<std::string> ConfigProxy::getStringSequence(const std::string& config_parameter) 
+{
+    spdlog::debug("getStringSequence request received to read value of [" + config_parameter + "] from config file");    
+    
+    YAML::Node sequence = config[config_parameter];
+    assert(sequence.IsSequence());
+    double size =  sequence.size();
+    // SPDLOG_INFO("value of [" + config_parameter + "] has been read from config file");
+    std::vector<std::string> stringsequence;
 
+    for (int i=0; i<size; i++)
+    {
+        stringsequence.push_back(sequence[i].as<std::string>());
+    }
+    SPDLOG_INFO("values of [" + config_parameter + "] has been read from config file");
+    return stringsequence;
+}
 // std::vector<std::unordered_map<std::string, std::string>> ConfigProxy::getMap(const std::string& config_parameter)
 // {
 //     SPDLOG_INFO("getMap request received to read value of [" + config_parameter + "] from config file");

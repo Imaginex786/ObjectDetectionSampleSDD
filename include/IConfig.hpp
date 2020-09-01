@@ -23,10 +23,8 @@ class IConfig {
         virtual bool getBool(const std::string& key) = 0;
         virtual std::vector<std::string> getStringVector(const std::string& key) = 0;
         virtual std::vector<float> getFloatVector(const std::string& key) = 0;
-        virtual std::vector<std::unordered_map<std::string, std::string>> getMap(const std::string& key) = 0;
-        virtual std::unordered_map<int, std::string> getClassMap(const std::string& key) = 0;
-        virtual void set(const std::string& config_parameter, const std::string& value) = 0;
-        virtual void setInt(const std::string& config_parameter, int value) = 0;
-        virtual void setFloat(const std::string& config_parameter, float value) = 0;
+        // virtual void set(const std::string& config_parameter, const std::string& value) = 0;
+        // virtual void setInt(const std::string& config_parameter, int value) = 0;
+        // virtual void setFloat(const std::string& config_parameter, float value) = 0;
 };
 #endif

@@ -54,7 +54,7 @@ endif()
 
 file(GLOB
       SOURCE
-        ${CMAKE_SOURCE_DIR}/src/*.cpp
+        ${CMAKE_SOURCE_DIR}/src/main_dnn.cpp
         ${CMAKE_SOURCE_DIR}/src/ConfigReader/*.cpp
 )
 add_executable(core ${SOURCE})

@@ -33,6 +33,10 @@ class ConfigProxy : public IConfig
         std::vector<std::string> getStringVector(const std::string& config_parameter);
         std::vector<float> getFloatVector(const std::string& config_parameter);
         float getFloat(const std::string& config_parameter);
+        std::vector<std::string> getStringSequence(const std::string& config_parameter);
+        int getSequenceSize(const std::string& config_parameter);
+
+
         /**
          * @param config_parameter: key in configuration file
          * @return list of maps.

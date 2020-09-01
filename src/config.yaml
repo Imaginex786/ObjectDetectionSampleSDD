@@ -1,0 +1,17 @@
+images_paths:
+    - "/workspace/img.bmp"
+input: "rtsp://admin:admin123@192.168.100.2:554/"
+model: "/app/windows/D/workspace/CNN/imaginex/timeNattendance/models/FP32-INT1/face-detection-adas-binary-0001.bin"
+config: "/app/windows/D/workspace/CNN/imaginex/timeNattendance/models/FP32-INT1/face-detection-adas-binary-0001.xml"
+debug_log: false 
+device: "CPU"
+thr: 0.5
+nms: 0.4
+scale: 1.0
+rgb: true
+width: -1
+height: -1
+async: 0
+backend: 2
+framework: ""
+target: 0
